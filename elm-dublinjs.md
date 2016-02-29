@@ -3,6 +3,7 @@
 ## Michael Twomey
 ### @micktwomey
 ### twoistoomany.com
+### https://github.com/micktwomey/elm-dublinjs
 
 [^1]: Hiring all the front and backend things!
 
@@ -307,11 +308,9 @@ void main () {
 
 # Thank you! [^6]
 
-- Elm
-    - http://elm-lang.org
-- Elm Dublin User Group
-    - http://www.meetup.com/Elm-User-Group-Dublin/
-- Also, Functional Kats!
-    - http://www.meetup.com/FunctionalKats/
+- Elm: http://elm-lang.org
+- Elm User Group: http://www.meetup.com/Elm-User-Group-Dublin/
+- Functional Kats: http://www.meetup.com/FunctionalKats/
+- Slides: https://github.com/micktwomey/elm-dublinjs
 
 [^6]: In a shock turn of events Udemy is hiring! michael.twomey@udemy.com
