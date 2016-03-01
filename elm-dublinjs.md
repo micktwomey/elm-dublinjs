@@ -2,10 +2,6 @@
 
 ## Michael Twomey
 ### @micktwomey
-### twoistoomany.com
-### https://github.com/micktwomey/elm-dublinjs
-
-[^1]: Hiring all the front and backend things!
 
 ---
 
@@ -14,16 +10,28 @@
 > The best of functional programming in your browser
 -- elm-lang.org
 
-- Full programming language
-- Focussed on the web front end
+---
+
+# Full Programming Language
+
+- A new programming language for frontend development
 - Strongly Typed (in a good way)
-- ML inspired (try saying Hindley–Milner three times)
-- Compiles to Javascript
+- ML inspired (try saying Hindley–Milner three times fast!)
 - Compiler is your friend (really!)
 
 ---
 
+# Compiles to Javascript
+
+- Full compiler toolchain (written in Haskell)
+- Emits a single .js file you can include and run, no other dependencies
+- Can treat the output like a library
+
+---
+
 # A Taste of Elm
+
+[HelloWorld.elm](http://localhost:8000/examples/HelloWorld.elm)
 
 ```haskell
 import Graphics.Element exposing (..)
@@ -36,6 +44,8 @@ main =
 ---
 
 # A Centred Taste of Elm
+
+[HelloWorldCentre.elm](http://localhost:8000/examples/HelloWorldCentre.elm)
 
 ```haskell
 import Graphics.Element exposing (..)
@@ -54,6 +64,8 @@ view ( width, height ) =
 
 # A Bigger Taste of Elm
 
+[HelloWorldBig.elm](http://localhost:8000/examples/HelloWorldBig.elm)
+
 ```haskell
 hello : Element
 hello =
@@ -65,12 +77,18 @@ hello =
 
 ---
 
-# Elm Philosophy
+# Side Note: Language Design is a Hard Balance
 
-![inline mute](https://www.youtube.com/watch?v=oYk8CKH7OhE&t=12m55s)
+![inline](indiana_mouse.jpg)
 
-^ Trying to move JS development to a way nicer place
-^ Not convinced gradual typing will get us there
+---
+
+# Elm Philosophy (paraphrasing)
+
+- Make a language for front end programmers
+- Ambitious: be both more maintainable and easier to use than Javascript (and more fun!)
+- Not convinced gradual typing will get us to a good place
+- Watch [Evan Czaplicki - Let's be mainstream! User focused design in Elm - Curry On](https://www.youtube.com/watch?v=oYk8CKH7OhE) for more
 
 ---
 
@@ -79,14 +97,16 @@ hello =
 - Nice Type System (really!)
 - Helpful compiler error messages
 - Time travelling debugger
-- No runtime exceptions [^2]
+- No runtime exceptions [^1]
 - Semantic package versioning baked in
 
-[^2]: You can call Debug.crash to get one if you want
+[^1]: You can call Debug.crash to get one if you want
 
 ---
 
 ## Compiler: Spot the Typo
+
+[HelpfulCompiler1.elm](http://localhost:8000/examples/HelpfulCompiler1.elm)
 
 ```haskell
 type alias Model = { title : String }
@@ -109,6 +129,8 @@ main = show (update init)
 
 ## Spot the "Type"-o
 
+[HelpfulCompiler2.elm](http://localhost:8000/examples/HelpfulCompiler2.elm)
+
 ```haskell
 showMessage : String -> Element
 showMessage message =
@@ -128,6 +150,8 @@ main =
 
 ## Learning via the Compiler
 
+[HelpfulCompiler3.elm](http://localhost:8000/examples/HelpfulCompiler3.elm)
+
 ```haskell
 main : Element
 main =
@@ -141,6 +165,8 @@ main =
 ---
 
 ## Hard to Express Incorrect Code
+
+[HelpfulCompiler4.elm](http://localhost:8000/examples/HelpfulCompiler4.elm)
 
 ```haskell
 type Action
@@ -163,11 +189,11 @@ main =
 
 ---
 
-## Good Ideas Spread [^3]
+## Good Ideas Spread [^2]
 
 ![inline](flow-error-messages.png)
 
-[^3]: https://twitter.com/alex_frantic/status/651498914252648448
+[^2]: https://twitter.com/alex_frantic/status/651498914252648448
 
 ---
 
@@ -175,7 +201,7 @@ main =
 
 ![inline mute loop](https://www.youtube.com/watch?v=RPNxNAJG4EU)
 
-^ Demo: http://localhost:8000/examples/Mario.elm?debug
+[Demo](http://localhost:8000/examples/Mario.elm?debug)
 
 ---
 
@@ -210,10 +236,10 @@ This is a MAJOR change.
 
 # Caveats
 
-- Language still evolving, so can change with each major release [^4]
+- Language still evolving, so can change with each major release [^3]
 - Interop with other JS might surprise you at first
 
-[^4]: e.g. in 0.15.1 to 0.16.0 a bunch of syntax around records was removed to simplify
+[^3]: e.g. in 0.15.1 to 0.16.0 a bunch of syntax around records was removed to simplify
 
 ---
 
@@ -221,10 +247,10 @@ This is a MAJOR change.
 
 - Can embed elm app in pages
 - Use ports to communicate
-- Can rewrite everything in Elm [^5]
+- Can rewrite everything in Elm [^4]
 - (Tangent: "native")
 
-[^5]: My favourite approach :smile:
+[^4]: My favourite approach :smile:
 
 ^ Native Similar to C extensions in other languages
 ^ Some parts of Elm libraries implemented as "native" extensions
@@ -243,7 +269,7 @@ port requestUser =
 
 ^ Declare what can go in and out
 
---- 
+---
 
 ```javascript
 myapp.ports.addUser.send([
@@ -263,6 +289,8 @@ function databaseLookup(user) {
 ---
 
 # Bonus: WebGL GLSL Compiler for Free!
+
+[thwomp.elm](http://localhost:8000/examples/thwomp.elm?debug)
 
 ```haskell
 vertexShader : Shader { attr | position:Vec3, color:Vec3 }
@@ -306,11 +334,21 @@ void main () {
 
 ---
 
-# Thank you! [^6]
+# Finally: My Favourite Feature
+
+> Elm has been my most successful (and fun!) attempt to learn Functional Programming yet
+-- Me
+
+- Elm is like a gateway drug to functional programming (and ML languages like F#, Haskell and OCaml)
+- Even if you don't wind up using it professionally you have fun learning
+
+---
+
+# Thank you! [^5]
 
 - Elm: http://elm-lang.org
 - Elm User Group: http://www.meetup.com/Elm-User-Group-Dublin/
 - Functional Kats: http://www.meetup.com/FunctionalKats/
 - Slides: https://github.com/micktwomey/elm-dublinjs
 
-[^6]: In a shock turn of events Udemy is hiring! michael.twomey@udemy.com
+[^5]: In a shock turn of events Udemy is hiring! michael.twomey@udemy.com
